@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Love Message</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">
+          <span>
+            Your beauty shines like stars in the night, <br />
+            Want to grab a coffee or take a sroll, all right?
+            <br />
+           I'd love to know you,explore something new, <br
+          /></span>
+          How about a date? What do you think, too?
+        </h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://i.postimg.cc/DyNVPGQf/c-LS1cfxv-GOPVpf9g3y.webp"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          function moveButton() {
+            var x =
+              Math.random() *
+                (window.innerWidth -
+                  document.getElementById("noButton").offsetWidth) -
+              85;
+            var y =
+              Math.random() *
+                (window.innerHeight -
+                  document.getElementById("noButton").offsetHeight) -
+              48;
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
